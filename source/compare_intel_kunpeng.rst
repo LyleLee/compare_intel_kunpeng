@@ -4,10 +4,12 @@
 
 cpu有很多需要信息需要了解，numa是其中之一。NUMA架构，非统一内存访问架构（英语：Non-uniform memory access，简称NUMA）。
 
-在numa出现之前， cpu通过内存控制器访问内存，显然，当cpu核数逐渐增多的今天，内存控制器会成为瓶颈。这个时候就考虑内存控制器进行拆分，内存平均分配到各个die上，cpu访问本地的内存时速度快，跨片访问慢。类似与这个图：
+在numa出现之前， cpu通过内存控制器访问内存，显然，当cpu核数逐渐增多的今天，内存控制器会成为瓶颈。这个时候就考虑内存控制器进行拆分
+内存平均分配到各个die上，cpu访问本地的内存时速度快，跨片访问慢。类似与这个图：
 |numa示意|
 
-在做性能优化时，针对numa结构的绑核可以让数据访问更快。有时候也经常会被问硬盘是在哪个numa节点上的，网卡是在哪个numa节点上的，中断怎么绑定效率最高，有必要了解一下。
+在做性能优化时，针对numa结构的绑核可以让数据访问更快。有时候也经常会被问硬盘是在哪个numa节点上的，网卡是在哪个numa节点上的，
+中断怎么绑定效率最高，有必要了解一下。
 
 主要设备信息
 ============
@@ -22,7 +24,7 @@ cpu有很多需要信息需要了解，numa是其中之一。NUMA架构，非统
 cpu 信息
 ========
 
-这里以lspci的输出做对比 
+这里以lspci的输出做对比
 
 泰山 鲲鹏 920-4826
 ----------------------------
@@ -52,7 +54,7 @@ cpu 信息
 戴尔 PowerEdge R730 Intel(R) Xeon(R) CPU E5-2630
 --------------------------------------------------
 
-.. code-block:: console 
+.. code-block:: console
 
    Architecture:          x86_64           #X86架构
    CPU op-mode(s):        32-bit, 64-bit   #同时支持32位和64位运行模式
@@ -79,7 +81,14 @@ cpu 信息
    L3 cache:              25600K           #L3 cache
    NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38 #numa节点1的CPU
    NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 #numa节点1的CPU
-   Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_pt ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts spec_ctrl intel_stibp
+   Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi
+                          mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs
+                          bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
+                          ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe
+                          popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch
+                          epb cat_l3 cdp_l3 intel_pt ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase
+                          tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt
+                          cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts spec_ctrl intel_stibp
 
 numa 拓扑
 =========
@@ -320,7 +329,8 @@ numa 拓扑
 | ``L3 L#1 (32MB)`` node 1 的L3 cache，32MB
 | ``L3 L#2 (32MB)`` node 2 的L3 cache，32MB
 | ``L3 L#3 (32MB)`` node 3 的L3 cache，32MB
-| ``L2 L#0 (512KB) + L1d L#0 (64KB) + L1i L#0 (64KB) + Core L#0 + PU L#0 (P#0)``
+| ``L2 L#0 (512KB) + L1d L#0 (64KB) + L1i L#0 (64KB) + Core L#0 +``
+| PU L#0 (P#0)
 | 一行代表一个核心，L#i = Instruction Cache, L#d表示 Data Cache. L1 = a
   Level 1 cache. “PU P#” = Processing Unit Processor
   可以看到每个node上挂了24个CPU,一共4个numa节点96个CPU
@@ -468,7 +478,8 @@ numa 拓扑
 
 | 这里也解读一下：
 | kunpeng 920 和 intel
-  2630都是两个物理核，也就是服务器上经常能看到两个非常大的散热器。区别是，intel CPU有超线程， 也就是说一个核心可以跑两个线程，也就相当于一核等于2核。
+  2630都是两个物理核，也就是服务器上经常能看到两个非常大的散热器。区别是，intel CPU有超线程
+  也就是说一个核心可以跑两个线程，也就相当于一核等于2核。
 
 .. code-block:: console
 
