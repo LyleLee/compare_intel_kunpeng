@@ -3,5 +3,9 @@
     "restructuredtext.builtDocumentationPath": "${workspaceFolder}/build/html",
     "restructuredtext.updateOnTextChanged": "true",
     "restructuredtext.updateDelay": 1000,
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "editor.rulers": [80,120],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#3d3a38"
+    }
 }

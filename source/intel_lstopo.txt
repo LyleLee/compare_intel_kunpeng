@@ -1,0 +1,107 @@
+   Machine (128GB total):
+     NUMANode L#0 (P#0 64GB)
+       Package L#0 + L3 L#0 (25MB)
+         L2 L#0 (256KB) + L1d L#0 (32KB) + L1i L#0 (32KB) + Core L#0
+           PU L#0 (P#0)
+           PU L#1 (P#20)
+         L2 L#1 (256KB) + L1d L#1 (32KB) + L1i L#1 (32KB) + Core L#1
+           PU L#2 (P#2)
+           PU L#3 (P#22)
+         L2 L#2 (256KB) + L1d L#2 (32KB) + L1i L#2 (32KB) + Core L#2
+           PU L#4 (P#4)
+           PU L#5 (P#24)
+         L2 L#3 (256KB) + L1d L#3 (32KB) + L1i L#3 (32KB) + Core L#3
+           PU L#6 (P#6)
+           PU L#7 (P#26)
+         L2 L#4 (256KB) + L1d L#4 (32KB) + L1i L#4 (32KB) + Core L#4
+           PU L#8 (P#8)
+           PU L#9 (P#28)
+         L2 L#5 (256KB) + L1d L#5 (32KB) + L1i L#5 (32KB) + Core L#5
+           PU L#10 (P#10)
+           PU L#11 (P#30)
+         L2 L#6 (256KB) + L1d L#6 (32KB) + L1i L#6 (32KB) + Core L#6
+           PU L#12 (P#12)
+           PU L#13 (P#32)
+         L2 L#7 (256KB) + L1d L#7 (32KB) + L1i L#7 (32KB) + Core L#7
+           PU L#14 (P#14)
+           PU L#15 (P#34)
+         L2 L#8 (256KB) + L1d L#8 (32KB) + L1i L#8 (32KB) + Core L#8
+           PU L#16 (P#16)
+           PU L#17 (P#36)
+         L2 L#9 (256KB) + L1d L#9 (32KB) + L1i L#9 (32KB) + Core L#9
+           PU L#18 (P#18)
+           PU L#19 (P#38)
+       HostBridge L#0
+         PCIBridge
+           PCI 1000:005d
+             Block(Disk) L#0 "sda"
+             Block(Disk) L#1 "sdb"
+         PCIBridge
+           PCI 8086:154d
+             Net L#2 "p7p1"
+           PCI 8086:154d
+             Net L#3 "p7p2"
+         PCIBridge
+           PCI 14e4:165f
+             Net L#4 "em3"
+           PCI 14e4:165f
+             Net L#5 "em4"
+         PCIBridge
+           PCI 14e4:165f
+             Net L#6 "em1"
+           PCI 14e4:165f
+             Net L#7 "em2"
+         PCIBridge
+           PCI 8086:154d
+             Net L#8 "p5p1"
+           PCI 8086:154d
+             Net L#9 "p5p2"
+         PCI 8086:8d62
+         PCIBridge
+           PCIBridge
+             PCIBridge
+               PCIBridge
+                 PCI 102b:0534
+                   GPU L#10 "card0"
+                   GPU L#11 "controlD64"
+         PCI 8086:8d02
+           Block(Removable Media Device) L#12 "sr0"
+     NUMANode L#1 (P#1 64GB)
+       Package L#1 + L3 L#1 (25MB)
+         L2 L#10 (256KB) + L1d L#10 (32KB) + L1i L#10 (32KB) + Core L#10
+           PU L#20 (P#1)
+           PU L#21 (P#21)
+         L2 L#11 (256KB) + L1d L#11 (32KB) + L1i L#11 (32KB) + Core L#11
+           PU L#22 (P#3)
+           PU L#23 (P#23)
+         L2 L#12 (256KB) + L1d L#12 (32KB) + L1i L#12 (32KB) + Core L#12
+           PU L#24 (P#5)
+           PU L#25 (P#25)
+         L2 L#13 (256KB) + L1d L#13 (32KB) + L1i L#13 (32KB) + Core L#13
+           PU L#26 (P#7)
+           PU L#27 (P#27)
+         L2 L#14 (256KB) + L1d L#14 (32KB) + L1i L#14 (32KB) + Core L#14
+           PU L#28 (P#9)
+           PU L#29 (P#29)
+         L2 L#15 (256KB) + L1d L#15 (32KB) + L1i L#15 (32KB) + Core L#15
+           PU L#30 (P#11)
+           PU L#31 (P#31)
+         L2 L#16 (256KB) + L1d L#16 (32KB) + L1i L#16 (32KB) + Core L#16
+           PU L#32 (P#13)
+           PU L#33 (P#33)
+         L2 L#17 (256KB) + L1d L#17 (32KB) + L1i L#17 (32KB) + Core L#17
+           PU L#34 (P#15)
+           PU L#35 (P#35)
+         L2 L#18 (256KB) + L1d L#18 (32KB) + L1i L#18 (32KB) + Core L#18
+           PU L#36 (P#17)
+           PU L#37 (P#37)
+         L2 L#19 (256KB) + L1d L#19 (32KB) + L1i L#19 (32KB) + Core L#19
+           PU L#38 (P#19)
+           PU L#39 (P#39)
+       HostBridge L#10
+         PCIBridge
+           2 x { PCI 1077:2532 }
+     Misc(MemoryModule)
+     Misc(MemoryModule)
+     Misc(MemoryModule)
+     Misc(MemoryModule)

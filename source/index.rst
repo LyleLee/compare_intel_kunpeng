@@ -3,13 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to compare_intel_kunpeng's documentation!
+对比Intel和Kunpeng处理器
 =================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: 内容:
+   :numbered:
 
+   compare_intel_kunpeng
 
 
 Indices and tables
