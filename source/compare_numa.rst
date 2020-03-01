@@ -41,6 +41,8 @@ Intel E5-2630：
 拓扑：Kunpeng 920
 =====================
 
+这里逐个片段解释附件 :ref:`kunpeng_lstop` 的内容
+
 .. literalinclude:: ./kunpeng_lstopo.txt
    :lines: 1-10
    :language: console

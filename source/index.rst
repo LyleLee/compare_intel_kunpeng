@@ -13,11 +13,3 @@
 
    compare_intel_kunpeng
    compare_numa
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

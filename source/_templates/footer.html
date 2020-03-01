@@ -1,4 +1,5 @@
 <footer>
+
   {% if (theme_prev_next_buttons_location == 'bottom' or theme_prev_next_buttons_location == 'both') and (next or prev) %}
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       {% if next %}
@@ -11,7 +12,14 @@
   {% endif %}
 
   <hr/>
-
+    <script src="https://utteranc.es/client.js"
+            repo="LyleLee/compare_intel_kunpeng"
+            issue-term="pathname"
+            label="utterances-bot-add"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
   <div role="contentinfo">
     <p>
     {%- if show_copyright %}
