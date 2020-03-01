@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'compare_intel_kunpeng'
+project = '对比intel和Kunpeng'
 copyright = '2020, Lyle'
 author = 'Lyle'
 
