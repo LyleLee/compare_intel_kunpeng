@@ -2,7 +2,7 @@
     "restructuredtext.confPath": "${workspaceFolder}/source",
     "restructuredtext.builtDocumentationPath": "${workspaceFolder}/build/html",
     "restructuredtext.updateOnTextChanged": "true",
-    "restructuredtext.updateDelay": 1000,
+    "restructuredtext.updateDelay": 500,
     "cmake.configureOnOpen": true,
     "editor.rulers": [80,120],
     "workbench.colorCustomizations": {

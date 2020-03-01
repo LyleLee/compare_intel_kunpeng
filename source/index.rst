@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-对比Intel和Kunpeng处理器
+对比Intel和Kunpeng
 =================================================
 
 .. toctree::
@@ -12,6 +12,7 @@
    :numbered:
 
    compare_intel_kunpeng
+   compare_numa
 
 
 Indices and tables
