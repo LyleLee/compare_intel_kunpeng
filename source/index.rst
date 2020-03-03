@@ -14,3 +14,4 @@
    compare_intel_kunpeng
    compare_numa
    compare_instruction
+   attachment

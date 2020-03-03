@@ -195,28 +195,6 @@ L2 L#0 (256KB) + L1d L#0 (32KB) + L1i L#0 (32KB) + Core L#0
   0
 
 
-附件
-=========================
-lstopo的输出
-
-.. _kunpeng_lstop:
-
-Kunpeng lstopo
----------------------
-
-.. literalinclude:: ./kunpeng_lstopo.txt
-  :language: console
-
-
-.. _intel_lstopo:
-
-Intel lstopo
---------------------
-
-.. literalinclude:: ./intel_lstopo.txt
-  :language: console
-
-
 .. |numa_kunpeng| image:: _static/images/numa_kunpeng.png
 .. |numa_intel| image:: _static/images/numa_intel.png
 .. |lstopo| image:: _static/images/taishan.png
