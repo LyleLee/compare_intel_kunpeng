@@ -14,4 +14,15 @@
    compare_intel_kunpeng
    compare_numa
    compare_instruction
+   network
    attachment
+
+
+.. todo::
+
+   架构差异
+   性能调优寄存器差异和对比
+   安全特性
+   可靠性特性
+   虚拟机制差异
+   接口差异
