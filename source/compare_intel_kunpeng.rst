@@ -9,11 +9,11 @@
    :header: 项目, Intel, kunpeng
    :widths: 30, 20, 20
 
-   架构,        x86/x64,  aarch64
-   比特,        32位/64位,     64位
-   指令集类型,   CISC,     RISC
-   指令集厂家,   Intel,    ARM
-   CPU厂家,     Intel,    华为海思
+   架构,        x86/x64,     aarch64
+   比特,        32位/64位,    64位
+   指令集类型,   CISC,        RISC
+   指令集厂家,   Intel,       ARM
+   CPU厂家,     Intel,       华为海思
 
 lscpu对比：核数、cache、线程
 ====================================
