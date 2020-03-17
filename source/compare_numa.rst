@@ -159,6 +159,8 @@ L2 L#0 (256KB) + L1d L#0 (32KB) + L1i L#0 (32KB) + Core L#0
 | |image2|
 
 
+.. _where_is_nic_numa:
+
 网卡在哪个numa节点上？
 ============================
 

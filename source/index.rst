@@ -14,6 +14,7 @@
    compare_intel_kunpeng
    compare_numa
    compare_instruction
+   performance_tuning
    network
    attachment
 
