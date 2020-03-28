@@ -16,6 +16,7 @@
    compare_instruction
    performance_tuning
    network
+   docker
    attachment
 
 
