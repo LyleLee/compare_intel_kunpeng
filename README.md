@@ -3,4 +3,4 @@ Compare intel and kunpeng cpus, helping people know about Kunpeng, the ARM64 chi
 
 This book is hosted on readthedocs:
 
-`https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/ <https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/>`_
+[https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest](https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/)
