@@ -6,6 +6,15 @@
 对比Intel和Kunpeng
 =================================================
 
+简单对比Intel和Kunpeng处理器，帮助大家了解x86和ARM差别
+
+Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM64.
+
+This book is hosted on readthedocs:
+
+`https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/ <https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/>`_
+
+
 .. toctree::
    :maxdepth: 2
    :caption: 内容:
@@ -19,12 +28,15 @@
    docker
    attachment
 
+.. important::
+
+   感谢参与贡献。如果有感谢兴趣的内容， 可以在issue提出。
 
 .. todo::
 
-   架构差异
-   性能调优寄存器差异和对比
-   安全特性
-   可靠性特性
-   虚拟机制差异
+   架构差异,
+   性能调优寄存器差异和对比,
+   安全特性,
+   可靠性特性,
+   虚拟机制差异,
    接口差异
