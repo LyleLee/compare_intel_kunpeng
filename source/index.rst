@@ -23,6 +23,7 @@ This book is hosted on readthedocs:
    compare_intel_kunpeng
    compare_numa
    compare_instruction
+   accelerator
    performance_tuning
    network
    docker
