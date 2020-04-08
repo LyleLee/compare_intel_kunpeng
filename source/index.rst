@@ -10,11 +10,6 @@
 
 Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM64.
 
-This book is hosted on readthedocs:
-
-`https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/ <https://compare-intel-kunpeng.readthedocs.io/zh_CN/latest/>`_
-
-
 .. toctree::
    :maxdepth: 2
    :caption: 内容:
@@ -22,9 +17,9 @@ This book is hosted on readthedocs:
 
    compare_intel_kunpeng
    compare_numa
+   performance_tuning
    compare_instruction
    accelerator
-   performance_tuning
    network
    docker
    attachment

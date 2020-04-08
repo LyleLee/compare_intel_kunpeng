@@ -9,6 +9,18 @@
 + HPRE Engine 高性能RSA加速引擎（HPRE，High Performance RSA Engine）
 + RDE Engine RAID DIF运算加速引擎（RDE，RAID DIF Engine）
 
+.. csv-table:: ZIP压缩解压对比
+    :header: 加速引擎, Kunpeng, Kunpeng ZIP加速引擎, Intel, Intel ZIP 加速引擎
+
+    ZIP压缩(Ratio 36%),   55 MB/s,  2380 MB/s(Ratio 45%), 75 MB/s, 待测
+    ZIP解压(Ratio 36%),   219 MB/S, 1530 MB/s(Ratio 45%), 278 MB/s, 待测
+
+
+软件压缩，可以看到在同等压缩效率的情况下， Intel速度要快。 使用加速器时加解压速度获得大幅度提升，但是硬件能获得的压缩率没有软件好。
+
+
+
+
 
 安装鲲鹏加速器
 ================
@@ -29,7 +41,7 @@
     79:00.0 Network and computing encryption device: Huawei Technologies Co., Ltd. HiSilicon HPRE Engine (rev 21)
 
 
-主要包括以下安装步骤， 可以看在github上找到 [#kae_github]_
+主要包括以下安装步骤， 如github项目介绍 [#kae_github]_
 
 1. 安装OpenSSL。 只有OpenSSL >= 1.1.1a 版本才能够使用加速器
 2. 安装加速器驱动KAEdriver。
@@ -40,8 +52,13 @@
 
 
 
-lzbench KAE测试结果
+ZIP 加解压测试结果
 =========================
+
+评测工具是lzbench [#lzbench]_
+
+
+Kunpeng 920测试结果
 
 .. code-block:: console
 
@@ -76,11 +93,9 @@ lzbench KAE测试结果
     [user1@kunpeng920 lzbench]$
 
 
-Intel 6248
------------------------
+Intel 6248测试结果
 
 .. code-block:: console
-    :caption: zlib
 
     [user1@intel6248 opensoftware]$ lzbench/lzbench -t16,16 -ezlib silesia.tar
     lzbench 1.8 (64-bit Linux)   Assembled by P.Skibinski
@@ -97,6 +112,7 @@ Intel 6248
     zlib 1.2.11 -9           9.76 MB/s   300 MB/s    67644548  31.92 silesia.tar
     done... (cIters=1 dIters=1 cTime=16.0 dTime=16.0 chunkSize=1706MB cSpeed=0MB)
 
+.. [#lzbench] 评测工具lzbench https://github.com/inikep/lzbench
 .. [#kae_github] KAE github项目地址 https://github.com/kunpengcompute/KAE
 .. [#kae_KAEzip] KAE ZIP引擎 https://github.com/kunpengcompute/KAEzip
 .. [#kae_install] 加速器安装 https://bbs.huaweicloud.com/forum/thread-34619-1-1.html
