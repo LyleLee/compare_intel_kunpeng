@@ -273,7 +273,6 @@ Intel的测试结果稳定在25Gbit/s左右
 OVS(open vswitch)
 ==========================
 
-ovs的安装运行查看 :doc:`ovs` 。
 
 组网模型：
 
@@ -787,10 +786,10 @@ docker: Error response from daemon
 排查多次， 操作并没有什么错误。论坛里面可能原因是中途涉及到重启docker daemon [#network_sandbox]_ ，重启设备问题消失。
 
 
-.. |docker_bridge| image:: ../images/docker_network_docker_bridge.png
-.. |ovs_bridge| image:: ../images/docker_network_ovs_bridge.png
-.. |docker_overlay| image:: ../images/docker_network_docker_overlay.png
-.. |ovs_overlay| image:: ../images/docker_network_ovs_overlay.png
+.. |docker_bridge| image:: ./_static/images/docker_network_docker_bridge.png
+.. |ovs_bridge| image:: ./_static/images/docker_network_ovs_bridge.png
+.. |docker_overlay| image:: ./_static/images/docker_network_docker_overlay.png
+.. |ovs_overlay| image:: ./_static/images/docker_network_ovs_overlay.png
 
 
 .. [#sdnlab]  https://www.sdnlab.com/23191.html
