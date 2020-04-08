@@ -11,7 +11,7 @@
 Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM64.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 内容:
    :numbered:
 
@@ -21,7 +21,7 @@ Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM6
    compare_instruction
    accelerator
    network
-   docker
+   docker_network
    attachment
 
 .. important::
