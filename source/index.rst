@@ -19,8 +19,10 @@ Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM6
    compare_numa
    performance_tuning
    compare_instruction
+   ddr_bandwidth
    accelerator
    network
+   docker_image
    docker_network
    attachment
 
