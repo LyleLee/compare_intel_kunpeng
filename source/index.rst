@@ -22,6 +22,7 @@ Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM6
    ddr_bandwidth
    accelerator
    network
+   docker_image
    docker_network
    attachment
 
