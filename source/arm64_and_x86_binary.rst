@@ -29,8 +29,8 @@
     -bash: ./hello_arm64: cannot execute binary file: Exec format error
 
 
-arm64目标程序在x86平台上运行
-------------------------------------
+arm64目标程序在x86平台上运行 [#qemu_static]_
+-------------------------------------------------
 
 ::
 
