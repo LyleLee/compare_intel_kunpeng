@@ -29,8 +29,12 @@
     -bash: ./hello_arm64: cannot execute binary file: Exec format error
 
 
-arm64目标程序在x86平台上运行 [#qemu_static]_
+在x86平台上运行arm64目标程序 [#qemu_static]_
 -------------------------------------------------
+
+背后的原理是利用了kernel binfmt特性. [#binfmt-misc]_ 我们需要告诉内核哪种二进制需要哪种解释器去执行，
+binfmt通过二进制文件的指定魔术字节识别二进制， 然后让注册的解释器执行。如果是我们自己操作，挂载虚拟文件系统、设置配置文件等操作。
+一个便捷的方式是使用别人已经准备好的操作步骤。 执行下面的命令会在host上完成注册过程。
 
 ::
 
@@ -49,7 +53,7 @@ arm64目标程序在x86平台上运行 [#qemu_static]_
             printf("hello world c\n");
     }
 
-编译后拷贝到其他设备X86上运行，也可以用前面编译出来的hello_world, 注意编译要带 `-static`,要不然会因为x86主机上没有ARM上的ld解释器，c库导致报错
+编译后拷贝到其他设备X86上运行，也可以用前面编译出来的hello_world, 注意编译要带 `-static`,要不然会因为x86主机上没有ARM上的ld解释器、c库等额外依赖导致报错
 
 ::
 
@@ -97,3 +101,4 @@ arm64目标程序在x86平台上运行 [#qemu_static]_
 
 
 .. [#qemu_static] https://github.com/multiarch/qemu-user-static
+.. [#binfmt-misc] https://www.kernel.org/doc/html/latest/admin-guide/binfmt-misc.html
