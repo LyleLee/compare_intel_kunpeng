@@ -6,7 +6,7 @@
 对比Intel和Kunpeng
 =================================================
 
-简单对比Intel和Kunpeng处理器，帮助大家了解x86和ARM差别
+简单对比Intel和Kunpeng处理器，帮助大家了解x86和ARM差别。
 
 Compare intel and kunpeng cpus, helping people know about differ in X86 and ARM64.
 
