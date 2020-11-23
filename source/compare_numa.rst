@@ -24,6 +24,15 @@ NUMA 距离
     2:  32  25  10  16     │
     3:  33  32  16  10     │
 
+
+这里我们可以知道Kunpeng920有4个NUMA节点， Intel E5-2630有2个NUMA节点。同时我们认为NUMA节点数量在出厂的时候就已经是确定的。
+在Intel平台上，服务器BIOS的SNC(Sub NUMA Clustering)设置会影响numa节点的数量。参考设置： 
+`【华为】 <https://support.huawei.com/enterprise/zh/doc/EDOC1100023841/ef84962b#ZH-CN_TOPIC_0143243761>`_ 
+`【H3C】 <http://www.h3c.com/cn/d_201907/1211972_30005_0.htm#_Toc13642673>`_ 
+`【HPE1】 <https://techlibrary.hpe.com/docs/iss/proliant-gen10-uefi/GUID-0200DE9A-AFCF-4CF0-919D-713E2A8B915A.html>`_ 
+`【HPE2】 <https://zhiliao.h3c.com/theme/details/61390>`_
+
+
 先给出他们距离的示意图：
 
 Kunpeng 920：
