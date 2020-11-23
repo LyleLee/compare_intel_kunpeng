@@ -10,7 +10,7 @@ NUMA架构，非统一内存访问架构（英语：Non-uniform memory access，
 NUMA 距离
 ================
 
-的数据来自numactl工具的输出：
+数据来自numactl工具的输出：
 
 
 .. code-block:: console
