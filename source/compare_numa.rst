@@ -33,7 +33,7 @@ NUMA 距离
 `【HPE2】 <https://zhiliao.h3c.com/theme/details/61390>`_
 
 
-先给出他们距离的示意图：
+根据上面的输出，先给出他们距离的示意图：
 
 Kunpeng 920：
 |numa_kunpeng|
